@@ -1,0 +1,30 @@
+{
+  "name": "webpack-image-loader",
+  "version": "0.0.1",
+  "description": "处理css以及spa页面中的本地图片引用",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heyuuuu/webpack-image-loader.git"
+  },
+  "keywords": [
+    "webpack",
+    "image"
+  ],
+  "author": "664475324@qq.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/heyuuuu/webpack-image-loader/issues"
+  },
+  "homepage": "https://github.com/heyuuuu/webpack-image-loader#readme",
+  "devDependencies": {
+    "imagemin": "^7.0.0",
+    "imagemin-jpegtran": "^6.0.0",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^8.0.0",
+    "loader-utils": "^1.2.3"
+  }
+}
