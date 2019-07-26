@@ -1,7 +1,7 @@
 # webpack-image-loader
 
+目前支持自动识别的图片格式有:jpg、png、gif。
 基于webpack4，处理css以及spa页面中的本地图片引用。
-
 自带转base64编码，基于imagemin的图片压缩功能。
 
 ## 如何配置该loader的options项?
