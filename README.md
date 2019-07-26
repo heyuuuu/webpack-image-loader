@@ -6,10 +6,10 @@
 
 ## 如何配置该loader的options项?
 
-> * root 设置相对于输出目录的根目录。
+> * root 默认是:/images 设置相对于输出目录的根目录。
 例如: root:'/image'，打包目录是dist，那么生成的目录就是 /dist/image
 
-> * name 设置生成文件的名称，基于interpolateName生成。
+> * name 默认是:/\[hash:12\].\[ext\] 设置生成文件的名称，基于interpolateName生成。
 可使用以下变量: \[path\]\[name\]\[ext\]\[hash\]等等扩展参数,[更多参考](https://www.npmjs.com/package/loader-utils#user-content-interpolatename)
 假设使用\[hash\]\[name\].\[ext\],./home/image/header.png => e4da3b7fbbce2345d7772b0674a318d5header.png
 
@@ -27,3 +27,33 @@
     imageminPngquant:{quality:\[0.75,.9\]},
     imageminMozjpeg:{quality:75}
 }
+
+## 如何在webpack中配置，这里以webpack4为例
+
+```
+    rules:[
+        {
+            test:/\.css$/,
+            use:[
+                "style-loader","css-loader",
+                {
+                    loader:"webpack-image-loader",
+                    options:{
+                        root:'/image',
+                        name:'[hash].[ext]',
+                        base64:30000,
+                        imagemin:{
+                            imageminPngquant:{
+                                quality:[0.75,.9]
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            test:/\.(ts|tsx)$/,
+            loader:["ts-loader",{loader:"webpack-image-loader",options:{root:'/html'}}]
+        }
+    ]
+```
