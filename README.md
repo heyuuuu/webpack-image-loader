@@ -29,6 +29,7 @@
 }
 
 ## 如何在webpack中配置，这里以webpack4为例
+注意，在使用该loader的时候建议放在执行顺序最前面。
 
 ```
     rules:[
@@ -56,4 +57,9 @@
             loader:["ts-loader",{loader:"webpack-image-loader",options:{root:'/html'}}]
         }
     ]
+```
+
+当然，你也可以使用默认配置
+```
+    use:["style-loader","css-loader","webpack-image-loader"]
 ```
