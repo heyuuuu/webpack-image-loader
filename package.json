@@ -1,6 +1,6 @@
 {
   "name": "webpack-image-loader",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "处理css以及spa页面中的本地图片引用",
   "main": "./lib/index.js",
   "scripts": {
@@ -20,7 +20,7 @@
     "url": "https://github.com/heyuuuu/webpack-image-loader/issues"
   },
   "homepage": "https://github.com/heyuuuu/webpack-image-loader#readme",
-  "devDependencies": {
+  "dependencies": {
     "imagemin": "^7.0.0",
     "imagemin-jpegtran": "^6.0.0",
     "imagemin-mozjpeg": "^8.0.0",
