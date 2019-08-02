@@ -4,6 +4,9 @@
 基于webpack4，处理css以及spa页面中的本地图片引用。
 自带转base64编码，基于imagemin的图片压缩功能。
 
+> 警告: 图片相对路径必须是中文路径。
+> 现在支持的图片有 jpg png gif svg icon
+
 ## 如何配置该loader的options项?
 
 > * root 默认是:/images 设置相对于输出目录的根目录。
