@@ -1,6 +1,6 @@
 {
   "name": "webpack-image-loader",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "处理css以及spa页面中的本地图片引用",
   "main": "./lib/index.js",
   "scripts": {
