@@ -23,7 +23,7 @@ module.exports = async function(resource){
         imagemin:   null
     };
     // 获取父级目录
-    const parentPath = path.parse(this.resourcePath).dir;
+	const parentPath = path.parse(this.resourcePath).dir;
 
     // 获取项目根目录
     const rootContext = this.rootContext;
