@@ -16,10 +16,11 @@
 可使用以下变量: \[path\]\[name\]\[ext\]\[hash\]等等扩展参数,[更多参考](https://www.npmjs.com/package/loader-utils#user-content-interpolatename)
 假设使用\[hash\]\[name\].\[ext\],./home/image/header.png => e4da3b7fbbce2345d7772b0674a318d5header.png
 
-> * base64 设置需要转换的图片大小。
+> * base64 设置需要转换的图片大小。**【在0.1.0该版本中不在支持】**
 比如设置为3000，那么表示小于3kb的图片会自动转换为base64编码
 
-> * imagemin 图片压缩配置。
+
+> * imagemin 图片压缩配置。**【在0.1.0该版本中不在支持】**
 以下是支持压缩的图片格式:
 - [x] imagemin-jpegtran ， 对应参数imageminJpegtran
 - [x] imagemin-pngquant ， 对应参数imageminPngquant
@@ -65,4 +66,14 @@
 当然，你也可以使用默认配置
 ```
     use:["style-loader","css-loader","webpack-image-loader"]
+```
+
+## 新增了自动检出插件
+该插件功能将避免未更改的图片资源参与构建，有助于大型多入口项目进行快速构建。
+```
+    const webpackImageLoaderPlugins = require("webpack-image-loader/compiler");
+
+	new webpackImageLoaderPlugins({
+		fileName: 'img-lock.txt'
+	})
 ```
